@@ -31,3 +31,13 @@ pnpm dev
 pnpm add electron -D
 
 pnpm add electron-builder -D
+
+# 第六步 完成 electron 项目的初始化
+
+# 第七步 使用 pnpm 安装 concurrently 包，可以同时操作两个命令
+
+pnpm add concurrently -D
+
+修改 package.json 中 script 对象的 dev 命令为 concurrently vite \"pnpm electron:dev\"
+
+# 处理打包问题

@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "main": "./src/main/main.js",
   "scripts": {
-    "dev": "vite",
+    "dev": "concurrently vite \"pnpm electron:dev\"",
     "electron:dev": "electron .",
     "build": "vue-tsc --noEmit && vite build",
     "preview": "vite preview"
@@ -14,6 +14,7 @@
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^2.2.0",
+    "concurrently": "^7.0.0",
     "electron": "^18.0.0",
     "electron-builder": "^22.14.13",
     "typescript": "^4.5.4",
