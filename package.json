@@ -1,9 +1,11 @@
 {
   "name": "vue_demo",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
+  "main": "./src/main/main.js",
   "scripts": {
     "dev": "vite",
+    "electron:dev": "electron .",
     "build": "vue-tsc --noEmit && vite build",
     "preview": "vite preview"
   },
