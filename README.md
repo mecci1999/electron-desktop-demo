@@ -2,6 +2,18 @@
 
 该项目为一个以 Vite 快速搭建一个 Electron+Vue3+TS 的项目
 
+# 安装项目依赖
+
+pnpm i
+
+# 启动 electron 项目
+
+pnpm dev
+
+# 打包 electron 项目
+
+pnpm build
+
 # 第一步 首先安装淘宝镜像
 
 找到 C 盘用户目录下的.npmrc 配置文件，配置 npm 的镜像为淘宝的镜像，具体请去https://www.npmmirror.com查看镜像地址

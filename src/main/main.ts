@@ -6,14 +6,18 @@ function createWindow() {
     width: 800,
     height: 600,
     webPreferences: {
-      // preload: path.join(__dirname, "preload.js"),
+      preload: path.join(__dirname, "preload.ts"),
     },
   });
 
-  // win.loadFile("index.html");
-
-  // 开发环境下默认启动URL
-  win.loadURL("http://localhost:3000");
+  // and load the index.html of the app
+  if (process.env.npm_lifecycle_event === "electron:dev") {
+    // 开发环境下默认启动URL
+    win.loadURL("http://localhost:3000");
+    win.webContents.openDevTools();
+  } else {
+    win.loadFile("./dist/index.html");
+  }
 }
 
 app.whenReady().then(() => {
